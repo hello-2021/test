@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第十四周音乐周测卷</title>
+    <style>
+        body{
+            height: auto;
+            width: auto;
+        }
+        div.paper{
+            margin:0 auto;
+            padding-left: 1.25em;
+            height: 70em;
+            width: 50em;
+            outline: auto;
+        }
+        div.title{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-size: 3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p.datk{
+            word-break:break-all;
+        }
+        p2.about{
+            color: rgb(107,107,107);
+            font-size: 5px;
+            font-weight: 500;
+        }
+    </style>
+
+    <script>
+        function ok(){
+            // var A1=document.getElementById('A1').value;
+            // var A2=document.getElementById('A2').value;
+            // var A3=document.getElementById('A3').value;
+            // var A4=document.getElementById('A4').value;
+            // var A5=document.getElementById('A5').value;
+            // var A6=document.getElementById('A6').value;
+            // var A7=document.getElementById('A7').value;
+            // var A8=document.getElementById('A8').value;
+            // var A9=document.getElementById('A9').value;
+            // var A10=document.getElementById('A10').value;
+            var An = {A1:document.getElementById('A1').value,
+        A2:document.getElementById('A2').value,
+        A3:document.getElementById('A3').value,
+        A4:document.getElementById('A4').value,
+        A5:document.getElementById('A5').value,
+        A6:document.getElementById('A6').value,
+        A7:document.getElementById('A7').value,
+        A8:document.getElementById('A8').value,
+        A9:document.getElementById('A9').value,
+        A10:document.getElementById('A10').value};
+            
+            var STR = JSON.stringify(An);
+            // window.localStorage.setItem('Answer', STR);
+            // window.confirm(STR);
+
+            datika = document.getElementById('datk');
+            datika.innerHTML=STR;
+        }
+    </script>
+</head>
+<body>
+    <div class="paper">
+        <div class="title">
+            <h1>第十四周音乐周测卷</h1>
+            <h2 style="font-size: 1em;text-align: center;">答案不需要规范格式，意对即可，播放音频前请适当将音量调小。</h2>
+        </div>
+
+        <HR align=center width=500 color=#858585 SIZE=2></HR>
+        <br/>
+        一、
+        <audio controls>
+            <source src="../music/01.mp3" type="audio/mpeg">
+            您的浏览器(IE8或更早)不支持 audio 元素。
+        </audio><br/>
+        1、此音乐片段的原曲作者是：<input type="text" id="A1"/><br/>
+        2、主要演奏乐器：<input type="text" id="A2"/><br/>
+        <!--  --><br/>
+        二、
+        <audio controls>
+            <source src="../music/02.mp3" type="audio/mpeg">
+            您的浏览器(IE8或更早)不支持 audio 元素。
+        </audio><br/>
+        3、此音乐片段的主奏乐器是：<input type="text" id="A3"/><br/>
+        4、作者是：<input type="text" id="A4"/><br/>
+        <!--  --><br/>
+        三、判断对错<br/>
+        5、《赶圩归来啊哩哩》中的衬词“啊哩哩”的作用是增强节奏感，突出其民族音乐特征。<input type="text" id="A5"/><br/>
+        6、“换头和尾”指乐句中以不同旋律开始，相同旋律结束。<input type="text" id="A6"/><br/>
+        7、《山歌好比春江水》选自音乐剧《刘三姐》。<input type="text" id="A7"/><br/>
+        8、《醉太平》的作者是吕文成，他被成为“高胡博士”。<input type="text" id="A8"/><br/>
+
+        <!--  --><br/>
+        四、<br/>
+        9、中国民族五声调式的五个音分别是：<input type="text" id="A9"/><br/>
+        10、日本五声调式的五个音分别是：<input type="text" id="A10"/><br/>
+
+        <br/>
+        <button onClick="ok()">确定（生成答题卡）</button>
+        <br/><br/>
+        <p id="tishi">答题卡</p>
+        <p id="datk"></p>
+
+        <p2 class="about">Made by XieTao |</p2>
+        <p2 class="about"> 注:如果网页内容不更新，请尝试清空浏览器缓存或使用无痕模式浏览</p2>
+    </div>
+</body>
+</html>
